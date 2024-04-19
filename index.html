@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="./img/fav.svg" type="image/x-icon"/>
+<link rel="stylesheet" href="./css/search_sheba.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="./css/sheba_shomuho.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Tiro+Bangla:ital@0;1&family=Varela+Round&display=swap"rel="stylesheet"/>
+<link rel="stylesheet" href="./css/styles.css"/>
+<link rel="stylesheet" href="./css/portrait.css"/>
+<link rel="stylesheet" href="./css/landscape.css"/>
+<link rel="stylesheet" href="./css/printarea.css"/>
+<link rel="stylesheet" href="./css//whatsapp.css"/>
+<title>সেবা সমূহ</title>
+</head>
+<body>
+<div id="head">সম্প্রতি অনলাইন সেবাসমূহঃ</div>
+<div id="outfit">
+    <ul id="preview"></ul>
+    <div div id="search" onclick="search()">
+        <svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
+        <rect class="bar"/><g class="magnifier">
+        <circle class="glass"/>
+        <line class="handle" x1="32" y1="32" x2="44" y2="44"></line>
+        </g><g class="sparks">
+        <circle class="spark"/>
+        <circle class="spark"/>
+        <circle class="spark"/>
+        </g><g class="burst pattern-one">
+        <circle class="particle circle"/>
+        <path class="particle triangle"/>
+        <circle class="particle circle"/>
+        <path class="particle plus"/>
+        <rect class="particle rect"/>
+        <path class="particle triangle"/>
+        </g>
+        <g class="burst pattern-two">
+        <path class="particle plus"/>
+        <circle class="particle circle"/>
+        <path class="particle triangle"/>
+        <rect class="particle rect"/>
+        <circle class="particle circle"/>
+        <path class="particle plus"/>
+        </g>
+        <g class="burst pattern-three">
+        <circle class="particle circle"/>
+        <rect class="particle rect"/>
+        <path class="particle plus"/>
+        <path class="particle triangle"/>
+        <rect class="particle rect"/>
+        <path class="particle plus"/>
+        </g>
+        </svg>
+        <input class="fading-placeholder" type="text" id="sheba_search_input" onkeyup="sheba_search()" placeholder="প্রয়োজনে এখানে খুঁজুন !" title="যেকোনো সেবা খুঁজুন"aria-label="Search for inspiration"/>
+    </div>
+</div>
+
+<div id="body">জনপ্রিয় সেবা সমূহঃ</div>
+<div id="outfit">
+<ul id="sheba_search_list"></ul>
+</div>
+<a href="https://sheba.pages.dev/" style="color:white;">
+<div id="foot">© Sheba Enterprise</div>
+</a>
+
+<!-- Plugins Area -->
+    
+<button style="display: none;" accesskey="w" class="open-button" onclick="openForm()">Open WhatsApp</button>
+    
+<div class="form-popup" id="whatsappForm">
+  <form class="form-container" onsubmit="sendWhatsAppMessage(); return false;">
+    <h2 style="margin-top: auto;">WhatsApp Web</h2>
+
+    <label for="PhoneNumber"><b>Phone Number:</b></label><br/>
+    <input style="width: 60px;" type="text" value="+880" placeholder="+880 (Bangladesh)" name="countrycode" required><input type="number" placeholder="01XXXXXXXXX" name="PhoneNumber" required>
+    <button type="submit" class="btn">Send Message</button>
+    <button type="submit" class="btn_APP">WhatsApp App</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+  </form>
+</div>
+
+
+<script src="https://sheba.yn.lt/welcome.js">
+</script>
+<script src="./js/shebashomuho.js"></script>
+<script src="./js/sheba_search.js"></script>
+<script src="./js/plugins/whatsapp.js"></script>
+</body>
+</html>
